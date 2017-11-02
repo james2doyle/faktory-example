@@ -1,0 +1,16 @@
+{
+  "name": "faktory-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "worker": "FAKTORY_URL=$(docker-machine ip):7419 JOB_TYPE=MyDoWorkJob node worker.js",
+    "start": "FAKTORY_URL=$(docker-machine ip):7419 JOB_TYPE=MyDoWorkJob node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faktory-worker": "^0.3.0"
+  }
+}
