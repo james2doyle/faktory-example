@@ -2,6 +2,7 @@
   "name": "faktory-testing",
   "version": "1.0.0",
   "description": "",
+  "repository": "https://github.com/james2doyle/faktory-example",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
