@@ -7,10 +7,10 @@ const doWork = function(date, obj) {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log('Doing fake work. args:', date, obj);
-      resolve(1);
+      resolve();
     }, 4000);
   });
-}
+};
 
 // subscribe to jobs with the "process.env.JOB_TYPE" type
 faktory.register(process.env.JOB_TYPE, doWork);
@@ -18,10 +18,8 @@ faktory.register(process.env.JOB_TYPE, doWork);
 // this will block and listen for signals
 faktory.work()
   .then((manager) => {
-    process.on('SIGINT', () => {
-      manager.stop()
-        .then(() => {
-          process.exit(0);
-        });
-    });
+    // do something with manager...
+  })
+  .catch((err) => {
+    console.log(err);
   });
